@@ -1,0 +1,43 @@
+body {
+  background-color: #9ca880;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  background-color: #c0a850;
+  margin: 5px 10px;
+  padding: 10px;
+  border-radius: 1em;
+  text-align: center;
+}
+a:hover {
+  border: 1px solid black;
+}
+
+p {
+  font-family: "Libre Baskerville", serif;
+}
+h1 {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+}
+
+.end_text {
+  text-align: end;
+  padding-top: 170px;
+  padding-right: 60px;
+  font-family: "Dancing Script", cursive;
+  font-size: 25px;
+}
+
+.section {
+  display: flex;
+}
+
+.secondsection,
+.thirdsection {
+  margin-left: 60px;
+}
