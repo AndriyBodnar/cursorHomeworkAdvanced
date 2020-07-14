@@ -1,0 +1,15 @@
+p {
+  margin: 30px;
+  font-size: 19px;
+  font-family: "Grenze Gotisch", cursive;
+  font-stretch: expanded;
+}
+
+span {
+  font-size: 20px;
+  color:red;
+}
+
+body{
+    background-color: thistle;
+}
