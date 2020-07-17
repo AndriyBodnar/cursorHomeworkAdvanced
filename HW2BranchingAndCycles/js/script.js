@@ -19,9 +19,9 @@ while (!Number.isInteger(secondNumber) || firstNumber >= secondNumber) {
 console.log(secondNumber);
 
 let sumNumber = 0;
-let checkPair = confirm("Skip even numbers?");
+let checkEven = confirm("Skip even numbers?");
 
-if (checkPair) {
+if (checkEven) {
   for (let i = firstNumber; i <= secondNumber; i++) {
     if (i % 2 !== 0) {
       sumNumber += i;
