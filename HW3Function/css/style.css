@@ -1,0 +1,21 @@
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  margin: 50px;
+  background-color: mintcream;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 40px;
+  color: cornflowerblue;
+}
+p {
+  margin-bottom: 18px;
+  font-size: 18px;
+  color: darkorchid;
+}
+p:last-child {
+  margin-bottom: 0px;
+  
+}
