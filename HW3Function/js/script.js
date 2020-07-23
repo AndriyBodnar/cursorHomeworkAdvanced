@@ -55,8 +55,8 @@ function convertCurrency(value) {
     value = parseInt(value) * 25;
     return "Convert value: " + value + " UAH";
   } else if (
-    String(value).split("").reverse()[0] === "uah" ||
-    String(value).split("").reverse()[0] === "UAH"
+    String(value).split("").reverse()[0] === "h" ||
+    String(value).split("").reverse()[0] === "H"
   ) {
     value = parseInt(value) / 25;
     return "Convert value: " + value + " $";
@@ -65,7 +65,7 @@ function convertCurrency(value) {
   }
 }
 
-function getRandomPassword(length) {
+function getRandomPassword(length = 8) {
   if (Number.isInteger(length)) {
     let pass = "";
 
@@ -108,9 +108,7 @@ div.innerHTML = `
   <p>Функція №5: Random number: ${getRandomNumber(1, 10)}</p>
   <p>Функція №6: ${countLetter("н", "Формування")}</p>
   <p>Функція №7: ${convertCurrency("800$")}</p>
-  <p>Функція №8: ${getRandomPassword(
-    parseInt(prompt("Input lenght password(func #8):"))
-  )}</p>
+  <p>Функція №8: ${getRandomPassword()}</p>
   <p>Функція №9: ${deleteLetters("т", "Тракторець")}</p>
   <p>Функція №10: ${isPalyndrom("A man, a plan, a canal. Panama")}</p>
   `;
