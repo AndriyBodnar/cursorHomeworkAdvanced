@@ -107,7 +107,7 @@ div.innerHTML = `
   <p>Функція №4: ${withoutTax(1000)}</p>
   <p>Функція №5: Random number: ${getRandomNumber(1, 10)}</p>
   <p>Функція №6: ${countLetter("н", "Формування")}</p>
-  <p>Функція №7: ${convertCurrency("800$")}</p>
+  <p>Функція №7: ${convertCurrency("300 UAH")}</p>
   <p>Функція №8: ${getRandomPassword()}</p>
   <p>Функція №9: ${deleteLetters("т", "Тракторець")}</p>
   <p>Функція №10: ${isPalyndrom("A man, a plan, a canal. Panama")}</p>

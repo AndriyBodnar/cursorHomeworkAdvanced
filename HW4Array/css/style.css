@@ -1,0 +1,26 @@
+body {
+  margin: 30px;
+  font-family: "Oxygen", sans-serif;
+  background-color: lightcyan;
+}
+h1 {
+  margin-bottom: 20px;
+  font-size: 40px;
+  color: salmon;
+}
+p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: darksalmon;
+}
+
+b {
+  font-size: 25px;
+  margin-bottom: 20px;
+  display: inline-block;
+  color: salmon;
+}
+
+p:nth-child(1) {
+  margin-top: 0px;
+}
