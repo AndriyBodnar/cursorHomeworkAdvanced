@@ -21,7 +21,7 @@ function getCouple(stdList) {
     }
   }
   for (let i = 0; i < boys.length; i++) {
-    pair.push(" " + boys[i] + " i " + girls[i]);
+    pair.push([" " + boys[i], " " + girls[i]]);
   }
   return pair;
 }
@@ -29,7 +29,7 @@ function getCouple(stdList) {
 function coupleSubject(couple, subject) {
   let coupleAndSubject = [];
   for (let i = 0; i < couple.length; i++) {
-    coupleAndSubject.push(couple[i] + " " + "(" + subject[i] + ")");
+    coupleAndSubject.push([couple[i], " (" + subject[i] + ")"]);
   }
   return coupleAndSubject;
 }
@@ -37,7 +37,7 @@ function coupleSubject(couple, subject) {
 function studentMarks(student, mark) {
   let stdScore = [];
   for (let i = 0; i < student.length; i++) {
-    stdScore.push(student[i] + ", " + mark[i]);
+    stdScore.push([" " + student[i], " " + mark[i]]);
   }
   return stdScore;
 }
@@ -45,13 +45,11 @@ function studentMarks(student, mark) {
 function coupleScore(pair, subject) {
   let pairScore = [];
   for (let i = 0; i < pair.length; i++) {
-    pairScore.push(
-      pair[i] +
-        " (" +
-        themes[i] +
-        ") " +
-        (Math.random() * (1 - 5) + 5).toFixed(0)
-    );
+    pairScore.push([
+      pair[i],
+      " (" + themes[i] + ")",
+      " " + (Math.random() * (1 - 5) + 5).toFixed(0),
+    ]);
   }
   return pairScore;
 }
