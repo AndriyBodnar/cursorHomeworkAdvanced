@@ -29,7 +29,7 @@ function getCouple(stdList) {
 function coupleSubject(couple, subject) {
   let coupleAndSubject = [];
   for (let i = 0; i < couple.length; i++) {
-    coupleAndSubject.push([couple[i], " (" + subject[i] + ")"]);
+    coupleAndSubject.push([couple[i].join(" i"), " (" + subject[i] + ")"]);
   }
   return coupleAndSubject;
 }
@@ -46,7 +46,7 @@ function coupleScore(pair, subject) {
   let pairScore = [];
   for (let i = 0; i < pair.length; i++) {
     pairScore.push([
-      pair[i],
+      pair[i].join(" i"),
       " (" + themes[i] + ")",
       " " + (Math.random() * (1 - 5) + 5).toFixed(0),
     ]);
