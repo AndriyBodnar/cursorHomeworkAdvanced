@@ -43,7 +43,7 @@ const getMedian = (...numbers) => {
     return sortNum[Math.round(middlePos) - 1];
   }
 };
-const median = getMedian(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2;
+const median = getMedian(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2);
 console.log(median);
 
 //5
