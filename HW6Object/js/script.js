@@ -36,7 +36,7 @@ const getSubjects = (student) =>
   Object.keys(student.subjects)
     .map((student) => {
       const newStr = (
-        student.slice(0,1).toUpperCase() + student.slice(1).toLowerCase()
+        student.slice(0, 1).toUpperCase() + student.slice(1).toLowerCase()
       ).replace("_", " ");
       return newStr;
     })
@@ -91,21 +91,27 @@ const calculateWordLetters = (str) => {
 
 let div = document.querySelector(".array");
 div.innerHTML = `
-   <p><b>Subjects</b></br>${getSubjects(students[0])}</p>
-   <p><b>Subjects</b></br>${getSubjects(students[1])}</p>
-   <p><b>Subjects</b></br>${getSubjects(students[2])}</p>
-   <p><b>Average mark</b></br>${getAverageMark(students[0])}</p>
-   <p><b>Average mark</b></br>${getAverageMark(students[1])}</p>
-   <p><b>Average mark</b></br>${getAverageMark(students[2])}</p>
-   <p><b>Students info</b></br>${Object.entries(
-     getStudentInfo(students[0])
-   )}</p>
-   <p><b>Students info</b></br>${Object.entries(
-     getStudentInfo(students[1])
-   )}</p>
-   <p><b>Students info</b></br>${Object.entries(
-     getStudentInfo(students[2])
-   )}</p>
+   <p><b>Subjects ${students[0].name}</b></br>${getSubjects(students[0])}</p>
+   <p><b>Subjects ${students[1].name}</b></br>${getSubjects(students[1])}</p>
+   <p><b>Subjects ${students[2].name}</b></br>${getSubjects(students[2])}</p>
+   <p><b>Average mark ${students[0].name}</b></br>${getAverageMark(
+  students[0]
+)}</p>
+   <p><b>Average mark ${students[1].name}</b></br>${getAverageMark(
+  students[1]
+)}</p>
+   <p><b>Average mark ${students[2].name}</b></br>${getAverageMark(
+  students[2]
+)}</p>
+   <p><b>Students info ${students[0].name}</b></br>${Object.entries(
+  getStudentInfo(students[0])
+)}</p>
+   <p><b>Students info ${students[1].name}</b></br>${Object.entries(
+  getStudentInfo(students[1])
+)}</p>
+   <p><b>Students info ${students[2].name}</b></br>${Object.entries(
+  getStudentInfo(students[2])
+)}</p>
    <p><b>Students names</b></br>${getStudentsNames(students)}</p>
    <p><b>Best students name</b></br>${getBestStudent(students)}</p>
    <p><b>Calculate words</b></br>${Object.entries(
