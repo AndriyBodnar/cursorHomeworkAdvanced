@@ -50,18 +50,18 @@ class Student {
   }
 }
 
-
-class BudgetStudent extends Student{
-  constructor(fullName, university, course){
-      super(fullName, university, course)
+class BudgetStudent extends Student {
+  constructor(university, course, fullName) {
+    super(university, course, fullName);
   }
-  getScholarship(){
-      if(this.getAverageMark() >= 4){
-          console.log('Ви отримали 1400 грн. стипендії')
-      }
-      else{
-          return 
-      }
+  
+  getScholarship() {
+    console.log(this.getAverageMark())
+    if (this.student && this.getAverageMark() >= 4) {
+      return this.fullName + ", Ви отримали 1400 грн. стипендії";
+    } else {
+      return null;
+    }
   }
 }
 
@@ -70,6 +70,10 @@ const student1 = new Student("НУ ЛП", "1", "Roman");
 const student2 = new Student("ЛНУ", "2", "Ivan");
 
 const student3 = new Student("УКУ", "3", "Fedir");
+
+const student4 = new BudgetStudent("НУ ЛП", "1", "Roman");
+const student5 = new BudgetStudent("ЛНУ", "2", "Ivan");
+const student6 = new BudgetStudent("УКУ", "3", "Fedir");
 
 console.log(student1.getInfo());
 console.log(student1.marks);
@@ -100,6 +104,10 @@ student3.dismiss();
 console.log(student3.marks);
 student3.recover();
 console.log(student3.marks);
-// console.log(student1.getScholarship());
-// console.log(student2.getScholarship());
-// console.log(student3.getScholarship());
+
+student4.marks = 2;
+student5.marks = 1;
+student6.marks = 5;
+console.log(student4.getScholarship());
+console.log(student5.getScholarship());
+console.log(student6.getScholarship());
