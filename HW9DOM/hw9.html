@@ -13,7 +13,12 @@
   </head>
   <body>
     <h1>Homework 9</h1>
-
+    <div class="btn__wrapper">
+      <button onclick="setRandomColor()">Random Color </button>
+          <button onclick="generateBlocksInterval()" id="start">
+            Random color interval 
+          </button>
+    </div>
     <div class="hidden" id="container">
       <div class="block"></div>
       <div class="block"></div>
@@ -41,12 +46,7 @@
       <div class="block"></div>
       <div class="block"></div>
     </div>
-    <div class="btn__wrapper">
-      <button onclick="setRandomColor()">Random Color </button>
-          <button onclick="generateBlocksInterval()" id="start">
-            Random color interval 
-          </button>
-    </div>
+    
    
   </body>
   <script src="./js/script.js" defer></script>
