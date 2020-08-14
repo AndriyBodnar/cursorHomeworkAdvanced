@@ -1,0 +1,58 @@
+body{
+    font-family: "Oxygen", sans-serif;
+}
+
+
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/Minimalist-Backgrounds-33-1920-x-1080.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8% 15%;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+
+.keyWord{
+    border: 2px solid #1599FF;
+    padding: 50px;
+    font-family: "Oxygen", sans-serif;
+    background-color: deepskyblue;
+    color: darkslateblue;
+    transition:ease  .9s;
+    font-size: 28px;
+    
+}
+.container__title{
+    flex-basis: 100%;
+    text-align: center;
+    color: royalblue;
+    font-size: 30px;
+}
+.container__title > h2 {
+    margin-top: 20px;
+}
+.keyWord:hover{
+    cursor: pointer;
+}
+
+@media(max-width: 1215px){
+.container{
+    flex-wrap: wrap;
+}
+}
+
+.play{
+    transform: scale(1.15);
+    border: 4px solid midnightblue;
+    padding: 47px;
+    box-shadow: 0 0 10px midnightblue;
+    font-size: 30px;
+    color: purple;
+}
+
