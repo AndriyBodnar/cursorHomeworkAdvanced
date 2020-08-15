@@ -8,19 +8,15 @@ class Student {
   }
 
   getInfo() {
-    return (
-      "Студент " +
-      this.course +
-      "го курсу " +
-      this.university +
-      " " +
-      this.fullName
-    );
+    return `Студент ${this.course}-го курсу ${this.fullName}, університет - ${this.university}`;
   }
 
   get marks() {
-    if (this.student) return this.allMarks;
-    else return null;
+    if (this.student) {
+      return this.allMarks;
+    } else {
+      return null;
+    }
   }
 
   set marks(mark) {
@@ -33,14 +29,13 @@ class Student {
     } else return null;
   }
 
-  getAverageMark() {
-    if (this.student) {
-      let sum = 0;
-      this.allMarks.forEach((mark) => (sum += mark));
-      let avg = (sum / this.marks.length).toFixed(1);
-      return avg;
-    } else return null;
+
+
+  getAverageMark(){
+    let sum = this.allMarks.reduce((total, mark) => total + mark, 0)
+    return (sum / this.allMarks.length).toFixed(1);
   }
+
 
   dismiss() {
     this.student = false;
@@ -54,9 +49,9 @@ class BudgetStudent extends Student {
   constructor(university, course, fullName) {
     super(university, course, fullName);
   }
-  
+
   getScholarship() {
-    console.log(this.getAverageMark())
+    console.log(this.getAverageMark());
     if (this.student && this.getAverageMark() >= 4) {
       return this.fullName + ", Ви отримали 1400 грн. стипендії";
     } else {
@@ -80,6 +75,7 @@ console.log(student1.marks);
 student1.marks = 2;
 console.log(student1.marks);
 console.log(student1.getAverageMark());
+
 student1.dismiss();
 console.log(student1.marks);
 student1.recover();

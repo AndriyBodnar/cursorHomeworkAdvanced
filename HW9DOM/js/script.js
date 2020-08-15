@@ -30,6 +30,5 @@ const generateBlocksInterval = () => {
     btn = true;
     interval = setInterval(() => setRandomColor(), 1000);
     document.getElementById("start").innerHTML = "Stop random set color interval ";
-    
   }
 }
