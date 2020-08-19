@@ -63,20 +63,7 @@ btn.addEventListener("click", seventyTwo);
 //   audio.currentTime = 0;
 //   key.classList.add("play");
 // }
-const btn = document.getElementById("key72");
 
-function playSoundClick(numberKey){
-    console.log(document.getElementById(`${numberKey}`));
-  const audio = document.querySelector(`audio[class = ${numberKey}]`);
-  const key = document.querySelector(`div[id = ${numberKey}]`);
-  audio.play();
-  audio.currentTime = 0;
-  key.classList.add("play");
-}
-
-const seventyTwo = playSoundClick(`key72`);
-
-btn.addEventListener("click", seventyTwo);
 
 
 
