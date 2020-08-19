@@ -41,6 +41,11 @@ body{
     cursor: pointer;
 }
 
+.keyWord:active{
+    
+}
+
+
 @media(max-width: 1215px){
 .container{
     flex-wrap: wrap;
