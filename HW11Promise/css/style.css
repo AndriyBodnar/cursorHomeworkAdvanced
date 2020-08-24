@@ -1,0 +1,44 @@
+body {
+  margin: 30px;
+  font-family: "Oxygen", sans-serif;
+  background-color: #c7b1b2;
+}
+ h2, h5 {
+  margin-bottom: 20px;
+  color: #79324c; 
+ }
+
+ h2{
+    font-size: 40px;
+ }
+
+ h5{
+    font-size: 25px;
+ }
+
+
+.hide {
+  display: none;
+}
+
+.btn-outline-primary {
+  margin-left: 50px;
+}
+
+.visible {
+  display: block;
+  text-align: center;
+  width: 400px;
+  margin-top: 30px;
+  color: #79324c;
+  background-color: #EFDCDB;
+  border-color: #D96292;
+}
+.ctn{
+    margin-top: 20px;
+}
+
+.ctnflex{
+    display: flex;
+    flex-direction: column;
+}
