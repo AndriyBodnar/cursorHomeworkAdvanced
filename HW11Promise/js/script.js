@@ -8,7 +8,7 @@ function getRandomChines(length) {
       let result = [] ;
       let sign = String(Date.now()).slice(-5);
       for ( let i = 0; i < length; i++) {
-        sign ++;
+        sign += TIME;
         result.push(String.fromCharCode(sign));
       }
       setTimeout(() => resolve(result.join("")), length * TIME)
