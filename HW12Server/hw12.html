@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="img/droid-helmet-soldier-star-wars-512.png"
+      type="image/x-icon"
+    />
+    <title>Star wars</title>
+    <link rel="stylesheet" href="../AdditionalFiles/css/reset.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <article class="starWars">
+      <div class="charachters__part">
+        <select id="charachters__part-select">
+          <option value="6" value="" >Episode I: A New Hope</option>
+          <option value="5" value="" >
+            Episode II: The Empire Strikes Back
+          </option>
+          <option value="4" value="" >
+            Episode III: Return of the Jedi
+          </option>
+          <option value="3" value="" >
+            Episode IV: The Phantom Menace
+          </option>
+          <option value="2" selected >
+            Episode V: Attack of the Clones
+          </option>
+          <option value="1" value="" >
+            Episode VI: Revenge of the Sith
+          </option>
+        </select>
+        <button id="charachters__part-btn">Show Charachters</button>
+        <div id="charachters__part-area"></div>
+      </div>
+
+      <div class="planets__container">
+        <button id="planetsShowBtn">Show Planets</button>
+        <p class="planets__container-title">
+          <a
+            href="https://en.wikipedia.org/wiki/List_of_Star_Wars_planets_and_moons"
+            >Planets</a
+          >
+        </p>
+        <div id="planets__area"></div>
+        <div id="planetsBtn">
+          <button id="prevBtn">Prev</button>
+          <button id="nextBtn">Next</button>
+        </div>
+      </div>
+    </article>
+
+    <div id="page-preloader" class="preloader">
+      <div class="loader"></div>
+    </div>
+    <script src="js/preloader.js"></script>
+    <script defer src="js/script.js"></script>
+  </body>
+</html>
