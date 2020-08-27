@@ -1,0 +1,47 @@
+body, button {
+  font-family: "Arvo", serif;
+}
+body{
+    background: lightcoral;
+}
+
+.container{
+    margin: 50px 200px;
+}
+
+
+h1, .idGenerator__area{
+    color: rgba(128, 15, 90, 0.808); 
+}
+
+
+
+
+button{
+    outline: none;
+    border: 2px solid rgba(175, 20, 124, 0.808);
+    border-radius: 5px;
+    padding: 8px;
+    color: rgb(152, 25, 236);
+    background-color: rgb(26, 207, 162);
+    cursor: pointer;
+    margin: 20px 0px 0px 0px;
+    transition: .9s;
+}
+
+button:hover{
+    transform: scale(1.2);
+    border-color: rgb(48, 14, 87) ;
+
+}
+
+
+#up{
+    margin-left: 20px;
+}
+
+#generate{
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
