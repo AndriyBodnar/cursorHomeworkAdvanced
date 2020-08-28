@@ -1,8 +1,8 @@
 body {
   background-image: url(../img/star-wars-desktop-wallpaper-For-Background-HD-Wallpaper.jpg);
-  background-repeat: no-repeat;
+  background-repeat: ;
   /* background-size: cover; */
-   overflow: hidden; 
+   /* overflow: hidden;  */
   font-family: 'Londrina Solid', cursive;
 }
 
