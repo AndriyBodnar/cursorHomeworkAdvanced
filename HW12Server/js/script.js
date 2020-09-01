@@ -22,12 +22,9 @@ function movieURL(num) {
   return `${apiURL}films/${num}/`;
 }
 
-
-
-
 charactersBtn.addEventListener("click", () => {
-let part = movieSelector.options[movieSelector.selectedIndex].value;
-let movie = movieURL(part);
+  let part = movieSelector.options[movieSelector.selectedIndex].value;
+  let movie = movieURL(part);
   let character = " ";
   sendRequest(movie)
     .then((res) => res.characters.map(sendRequest))
@@ -38,23 +35,20 @@ let movie = movieURL(part);
         movieSelector.classList.add(`activeSelect`);
         // charactersBtn.style = `visibility: hidden`;
         character += `<div class="charachters__info">
-
-                          <p>Name: <span> ${el.name},  </span>
-                          Birth date: <span> ${el.birth_year}, </span>
-                          Gender: <span>${el.gender}</span>
-                          </p>
-                    </div>`;
+                            <p>Name: <span> ${el.name},  </span>
+                            Birth date: <span> ${el.birth_year}, </span>
+                            Gender: <span>${el.gender}</span>
+                            </p>
+                      </div>`;
         charachtersPartArea.innerHTML = `${character}`;
+        charactersBtn.disabled = true;
       });
     });
 });
 
-
-
-
-
-
-
+movieSelector.addEventListener("click", () => {
+  charactersBtn.disabled = false;
+});
 
 let page = 1;
 
@@ -75,60 +69,46 @@ planetsShowBtn.addEventListener("click", () => {
   });
   planetsBtn.style = "visibility: visible;";
   planetsShowBtn.style = `display: none`;
-  document
-    .querySelector(`.planets__container-title`)
-    .classList.add(`block`);
-
-console.log(document
-  .getElementsByClassName(`planets__container-title`))
+  document.querySelector(`.planets__container-title`).classList.add(`block`);
+  prevBtn.style = "visibility: hidden;";
 });
 
-let currentPage = 1;
-
 nextBtn.addEventListener("click", () => {
-  if (currentPage === 6) {
-    return;
-  } else {
-    sendRequest(urlForPlanets(page++)).then((res) => {
+  sendRequest(urlForPlanets(++page)).then((res) => {
+    if (res.next == null) {
+      nextBtn.style = "visibility: hidden;";
+      return (nextBtn.disabled = true);
+    } else {
       let planet = "";
       res.results.forEach((el) => {
         planet += `<div class="planets__info">
-                  <p>Name<span>: ${el.name},</span></p>
-                </div>`;
+                    <p>Name<span>: ${el.name},</span></p>
+                  </div>`;
         planetsArea.innerHTML = `${planet}`;
       });
       currentPage = page;
-      console.log("currentPage", currentPage);
-    });
-  }
+      prevBtn.disabled = false;
+      prevBtn.style = "visibility: visible;";
+    }
+  });
 });
 
 prevBtn.addEventListener("click", () => {
-  if (currentPage === 1) {
-    return;
-  } else {
-    sendRequest(urlForPlanets(page--)).then((res) => {
+  sendRequest(urlForPlanets((page -= 1))).then((res) => {
+    if (res.previous == null) {
+      prevBtn.style = "visibility: hidden;";
+      return (prevBtn.disabled = true);
+    } else {
       let planet = "";
+      nextBtn.style = "visibility: visible;";
       res.results.forEach((el) => {
         planet += `<div class="planets__info">
-        <p>Name<span>: ${el.name},</span></p>
-      </div>`;
+          <p>Name<span>: ${el.name},</span></p>
+        </div>`;
         planetsArea.innerHTML = `${planet}`;
       });
-      currentPage = page;
-      console.log("currentPage", currentPage);
-    });
-  }
+      nextBtn.disabled = false;
+      prevBtn.style = "visibility: visible;";
+    }
+  });
 });
-
-
-
-
-
-
-
-
-
-
-
-
