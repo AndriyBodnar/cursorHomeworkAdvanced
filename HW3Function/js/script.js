@@ -26,10 +26,10 @@ function withoutTax(salary) {
   }
 }
 
-function getRandomNumber(n, m) {
+ function getRandomNumber(n, m) {
   n = Math.round(n);
   m = Math.round(m);
-  return (random = (Math.random() * (n - m) + m).toFixed(0));
+  return (random = Math.random() * (n - m) + m).toFixed(0);
 }
 
 function countLetter(ltr, word) {
@@ -78,8 +78,7 @@ function getRandomPassword(length = 8) {
     return "Error length value";
   }
 }
-
-function deleteLetters(ltr, word) {
+ function deleteLetters(ltr, word) {
   ltr = ltr.toLowerCase();
   word = word.toLowerCase();
   for (let i = 0; i < word.length; i++) {
@@ -112,3 +111,5 @@ div.innerHTML = `
   <p>Функція №9: ${deleteLetters("т", "Тракторець")}</p>
   <p>Функція №10: ${isPalyndrom("A man, a plan, a canal. Panama")}</p>
   `;
+
+

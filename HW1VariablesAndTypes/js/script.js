@@ -43,7 +43,7 @@ let netProfit = (cost - discountPrice).toFixed(2);
 console.log(discount);
 console.log(discountPrice);
 console.log(salePrice);
-console.log(cost);
+export console.log(cost);
 console.log(netProfit);
 
 let div = document.querySelector(".main__price");

@@ -1,6 +1,6 @@
 //keyboard
 
-function playSound(el) {
+ function playSound(el) {
   const audio = document.querySelector(`audio[class = "key${el.keyCode}"]`);
   const key = document.querySelector(`div[id = "key${el.keyCode}"]`);
   if (!audio) return;
